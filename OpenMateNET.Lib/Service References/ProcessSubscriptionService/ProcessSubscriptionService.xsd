@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://inbound.verbs.openmate.automate.com/" targetNamespace="http://inbound.verbs.openmate.automate.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getEndpointSubscriptions" type="tns:getEndpointSubscriptions" />
+  <xs:element name="getEndpointSubscriptionsResponse" type="tns:getEndpointSubscriptionsResponse" />
+  <xs:element name="getSubscriptions" type="tns:getSubscriptions" />
+  <xs:element name="getSubscriptionsResponse" type="tns:getSubscriptionsResponse" />
+  <xs:element name="subscribe" type="tns:subscribe" />
+  <xs:element name="subscribeResponse" type="tns:subscribeResponse" />
+  <xs:element name="unSubscribe" type="tns:unSubscribe" />
+  <xs:element name="unSubscribeResponse" type="tns:unSubscribeResponse" />
+  <xs:complexType name="unSubscribe">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authenticationToken" type="tns:authenticationToken" />
+      <xs:element name="dealerEndpointId" type="xs:int" />
+      <xs:element name="thirdPartyId" type="xs:int" />
+      <xs:element minOccurs="0" name="transactionType" type="tns:transactionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="authenticationToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userName" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="unSubscribeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:subscriptionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSubscriptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authenticationToken" type="tns:authenticationToken" />
+      <xs:element name="thirdPartyId" type="xs:int" />
+      <xs:element minOccurs="0" name="transactionType" type="tns:transactionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSubscriptionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:subscription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscription">
+    <xs:sequence>
+      <xs:element name="dealerEndpointId" type="xs:int" />
+      <xs:element name="thirdPartyId" type="xs:int" />
+      <xs:element minOccurs="0" name="type" type="tns:transactionType" />
+      <xs:element name="isSubscribed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="callback" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscribe">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authenticationToken" type="tns:authenticationToken" />
+      <xs:element name="dealerEndpointId" type="xs:int" />
+      <xs:element name="thirdPartyId" type="xs:int" />
+      <xs:element minOccurs="0" name="transactionType" type="tns:transactionType" />
+      <xs:element minOccurs="0" name="callback" type="tns:subscriptionCallback" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscriptionCallback">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uri" type="xs:string" />
+      <xs:element minOccurs="0" name="apiVersion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscribeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:subscriptionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEndpointSubscriptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authenticationToken" type="tns:authenticationToken" />
+      <xs:element name="thirdPartyId" type="xs:int" />
+      <xs:element name="endpointId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEndpointSubscriptionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:subscription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="transactionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DealerUp" />
+      <xs:enumeration value="DealerDown" />
+      <xs:enumeration value="ProcessVehicleInventoryBatch" />
+      <xs:enumeration value="ProcessVehicleInventoryChange" />
+      <xs:enumeration value="ProcessVehicleInventoryAdd" />
+      <xs:enumeration value="ProcessVehicleDeleted" />
+      <xs:enumeration value="ProcessCustomerChange" />
+      <xs:enumeration value="ProcessCustomerAdd" />
+      <xs:enumeration value="ProcessCustomerDeleted" />
+      <xs:enumeration value="ProcessDealChange" />
+      <xs:enumeration value="ProcessDealAdd" />
+      <xs:enumeration value="ProcessDealDeleted" />
+      <xs:enumeration value="GetSalespersonConfig" />
+      <xs:enumeration value="GetDealFees" />
+      <xs:enumeration value="GetDealAccessories" />
+      <xs:enumeration value="GetDealRebates" />
+      <xs:enumeration value="GetDealIncentives" />
+      <xs:enumeration value="GetDealInsuranceCompanies" />
+      <xs:enumeration value="GetDealServiceWarranties" />
+      <xs:enumeration value="GetDealLenders" />
+      <xs:enumeration value="ProcessServiceAppointmentCancel" />
+      <xs:enumeration value="ProcessServiceAppointmentAdd" />
+      <xs:enumeration value="ProcessServiceAppointmentChange" />
+      <xs:enumeration value="RepairOrderStatusChanged" />
+      <xs:enumeration value="GetAdvisorConfig" />
+      <xs:enumeration value="GetServiceCatalog" />
+      <xs:enumeration value="GetRepairOrderStatuses" />
+      <xs:enumeration value="ProcessCreditAppAdd" />
+      <xs:enumeration value="ProcessCreditAppChange" />
+      <xs:enumeration value="GetVehicleInventoryKeys" />
+      <xs:enumeration value="GetServiceAppointmentKeys" />
+      <xs:enumeration value="GetDealKeys" />
+      <xs:enumeration value="GetRepairOrderKeys" />
+      <xs:enumeration value="GetCustomerKeys" />
+      <xs:enumeration value="GetCustomers" />
+      <xs:enumeration value="GetVehicleInventory" />
+      <xs:enumeration value="GetRepairOrders" />
+      <xs:enumeration value="GetServiceAppointments" />
+      <xs:enumeration value="ProcessFinancialStatement" />
+      <xs:enumeration value="GetDeals" />
+      <xs:enumeration value="ProcessCommand" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="subscriptionResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Sucess" />
+      <xs:enumeration value="Denied" />
+      <xs:enumeration value="ValidationFailure" />
+      <xs:enumeration value="InternalFailure" />
+      <xs:enumeration value="Duplicate" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

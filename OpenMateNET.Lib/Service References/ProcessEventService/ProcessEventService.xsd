@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://openmate.automate-webservices.com/" targetNamespace="http://openmate.automate-webservices.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="processEvent" type="tns:processEvent" />
+  <xs:element name="processEventResponse" type="tns:processEventResponse" />
+  <xs:complexType name="processEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authenticationToken" type="tns:authenticationToken" />
+      <xs:element name="sourceThirdPartyId" type="xs:int" />
+      <xs:element name="dealerEndpointId" type="xs:int" />
+      <xs:element minOccurs="0" name="eventType" type="tns:transactionType" />
+      <xs:element minOccurs="0" name="payload" type="xs:string" />
+      <xs:element minOccurs="0" name="payloadVersion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="authenticationToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userName" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="processEventResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" form="qualified" name="processEventResult" type="tns:processEventResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="processEventResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="response" type="xs:string" />
+      <xs:element name="businessError" type="xs:boolean" />
+      <xs:element name="systemError" type="xs:boolean" />
+      <xs:element name="retryable" type="xs:boolean" />
+      <xs:element name="statusCode" type="tns:processEventStatusCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="transactionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DealerUp" />
+      <xs:enumeration value="DealerDown" />
+      <xs:enumeration value="ProcessVehicleInventoryBatch" />
+      <xs:enumeration value="ProcessVehicleInventoryChange" />
+      <xs:enumeration value="ProcessVehicleInventoryAdd" />
+      <xs:enumeration value="ProcessVehicleDeleted" />
+      <xs:enumeration value="ProcessCustomerChange" />
+      <xs:enumeration value="ProcessCustomerAdd" />
+      <xs:enumeration value="ProcessCustomerDeleted" />
+      <xs:enumeration value="ProcessDealChange" />
+      <xs:enumeration value="ProcessDealAdd" />
+      <xs:enumeration value="ProcessDealDeleted" />
+      <xs:enumeration value="GetSalespersonConfig" />
+      <xs:enumeration value="GetDealFees" />
+      <xs:enumeration value="GetDealAccessories" />
+      <xs:enumeration value="GetDealRebates" />
+      <xs:enumeration value="GetDealIncentives" />
+      <xs:enumeration value="GetDealInsuranceCompanies" />
+      <xs:enumeration value="GetDealServiceWarranties" />
+      <xs:enumeration value="GetDealLenders" />
+      <xs:enumeration value="ProcessServiceAppointmentCancel" />
+      <xs:enumeration value="ProcessServiceAppointmentAdd" />
+      <xs:enumeration value="ProcessServiceAppointmentChange" />
+      <xs:enumeration value="RepairOrderStatusChanged" />
+      <xs:enumeration value="GetAdvisorConfig" />
+      <xs:enumeration value="GetServiceCatalog" />
+      <xs:enumeration value="GetRepairOrderStatuses" />
+      <xs:enumeration value="ProcessCreditAppAdd" />
+      <xs:enumeration value="ProcessCreditAppChange" />
+      <xs:enumeration value="GetVehicleInventoryKeys" />
+      <xs:enumeration value="GetServiceAppointmentKeys" />
+      <xs:enumeration value="GetDealKeys" />
+      <xs:enumeration value="GetRepairOrderKeys" />
+      <xs:enumeration value="GetCustomerKeys" />
+      <xs:enumeration value="GetCustomers" />
+      <xs:enumeration value="GetVehicleInventory" />
+      <xs:enumeration value="GetRepairOrders" />
+      <xs:enumeration value="GetServiceAppointments" />
+      <xs:enumeration value="ProcessFinancialStatement" />
+      <xs:enumeration value="GetDeals" />
+      <xs:enumeration value="ProcessCommand" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="processEventStatusCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESS" />
+      <xs:enumeration value="PERMISSION_DENIED" />
+      <xs:enumeration value="UNKNOWN_SOURCE" />
+      <xs:enumeration value="UNKNOWN_DESTINATION" />
+      <xs:enumeration value="PARSE_FAILURE" />
+      <xs:enumeration value="VALIDATION_FAILURE" />
+      <xs:enumeration value="ENDPOINT_FAILURE" />
+      <xs:enumeration value="UNKNOWN_FAILURE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
