@@ -40,7 +40,7 @@ namespace OpenMateNET.Lib
             this.Password = Password;
         }
 
-        public virtual void Test()
+        public virtual void Request<T>(IRequest<T> request)
         {
             using (var svc = GetService())
             {
@@ -57,10 +57,10 @@ namespace OpenMateNET.Lib
                     1,
 
                     // Which transaction to run
-                    transactionType.GetCustomers,
+                    request.TransactionType,
 
                     // The data to be processed
-                    "",
+                    request.XML,
 
                      PAYLOAD_VERSION
                 );
