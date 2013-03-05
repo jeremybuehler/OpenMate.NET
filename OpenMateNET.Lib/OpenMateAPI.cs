@@ -1,16 +1,16 @@
 ﻿using OpenMateNET.Lib.ProcessEventService;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OpenMateNET.Lib
 {
     public interface IOpenMateAPI
     {
-
+        /// <summary>
+        /// Retrieves a list of open repair orders for the given dealer id.
+        /// </summary>
+        IEnumerable<Star5.RepairOrderType> GetOpenRepairOrders(int DealerEndpointId);
     }
 
     public class OpenMateAPI : IOpenMateAPI
@@ -40,12 +40,23 @@ namespace OpenMateNET.Lib
             this.Password = Password;
         }
 
-        public virtual void Request<T>(IRequest<T> request)
+        public IEnumerable<Star5.RepairOrderType> GetOpenRepairOrders(int DealerEndpointId)
+        {
+            var request = new GetRepairOrderRequest()
+            {
+                DealerEndpointId = DealerEndpointId
+            };
+
+            return Request(request);
+        }
+
+        public virtual T Request<T>(IRequest<T> request)
         {
             using (var svc = GetService())
             {
-                var response = svc.processEvent(
-                    // Add in the authentication and versioning information
+                processEventResult response = svc.processEvent(
+
+                    // Add in the authentication info
                     new authenticationToken()
                     {
                         userName = this.ThirdPartySourceId.ToString(),
@@ -54,7 +65,7 @@ namespace OpenMateNET.Lib
                     this.ThirdPartySourceId,
 
                     // Which dealership to target
-                    1,
+                    request.DealerEndpointId,
 
                     // Which transaction to run
                     request.TransactionType,
@@ -62,15 +73,15 @@ namespace OpenMateNET.Lib
                     // The data to be processed
                     request.XML,
 
-                     PAYLOAD_VERSION
+                    // Payload versioning information
+                    PAYLOAD_VERSION
                 );
 
                 // Check the response for errors and handle them as necessary.
                 CheckErrors(response);
 
                 // Process the response.
-
-
+                return request.ProcessResponse(response.response);
             }
         }
 
@@ -94,25 +105,21 @@ namespace OpenMateNET.Lib
             // Check the status codes.
             if (result.statusCode == processEventStatusCode.ENDPOINT_FAILURE)
             {
-
             }
 
             // Check for a system error.
             if (result.systemError)
             {
-
             }
 
             // Check for a business error.
             if (result.businessError)
             {
-
             }
 
             if (result.retryable)
             {
                 // Re-send it.
-
             }
 
             // Otherwise the request was successful, move on.
