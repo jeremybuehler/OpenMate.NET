@@ -1,6 +1,5 @@
 ﻿using OpenMateNET.Lib.ProcessEventService;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
@@ -33,16 +32,6 @@ namespace OpenMateNET
             {
                 return (T)new XmlSerializer(typeof(T)).Deserialize(reader);
             }
-        }
-    }
-
-    public class GetRepairOrderRequest : IRequest<IEnumerable<Star5.RepairOrderType>>
-    {
-        public override transactionType TransactionType { get { return transactionType.GetRepairOrders; } }
-
-        internal override String XML
-        {
-            get { throw new NotImplementedException(); }
         }
     }
 }

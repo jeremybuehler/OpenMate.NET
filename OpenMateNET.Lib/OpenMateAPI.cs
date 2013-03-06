@@ -1,4 +1,5 @@
 ﻿using OpenMateNET.Lib.ProcessEventService;
+using OpenMateNET.Lib.Requests;
 using System;
 using System.Collections.Generic;
 using System.ServiceModel;
