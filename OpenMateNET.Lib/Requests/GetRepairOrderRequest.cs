@@ -8,7 +8,7 @@ namespace OpenMateNET.Lib.Requests
     {
         public override transactionType TransactionType { get { return transactionType.GetRepairOrders; } }
 
-        internal override String XML
+        internal override String Payload
         {
             get { throw new NotImplementedException(); }
         }

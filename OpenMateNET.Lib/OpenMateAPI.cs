@@ -67,7 +67,7 @@ namespace OpenMateNET.Lib
                     request.TransactionType,
 
                     // The data to be processed
-                    request.XML,
+                    request.Payload,
 
                     // Payload versioning information
                     PAYLOAD_VERSION

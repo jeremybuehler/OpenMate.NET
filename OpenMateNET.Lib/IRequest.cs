@@ -21,7 +21,7 @@ namespace OpenMateNET
         /// <summary>
         /// A property representing the XML content of a specific request.
         /// </summary>
-        internal abstract String XML { get; }
+        internal abstract String Payload { get; }
 
         /// <summary>
         /// Process the xml response from the web service.
