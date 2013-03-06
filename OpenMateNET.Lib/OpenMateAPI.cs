@@ -5,14 +5,9 @@ using System.ServiceModel;
 
 namespace OpenMateNET.Lib
 {
-    public interface IOpenMateAPI
-    {
-        /// <summary>
-        /// Retrieves a list of open repair orders for the given dealer id.
-        /// </summary>
-        IEnumerable<Star5.RepairOrderType> GetOpenRepairOrders(int DealerEndpointId);
-    }
-
+    /// <summary>
+    /// Basic implementation for pulling data from the web service and parsing it into the correct, usable objects.
+    /// </summary>
     public class OpenMateAPI : IOpenMateAPI
     {
         // What version of the STAR standard we use.
@@ -127,8 +122,11 @@ namespace OpenMateNET.Lib
 
         internal virtual ProcessEventClient GetService()
         {
-            // TODO Set any special binding settings here.
-            var binding = new BasicHttpBinding() { };
+            var binding = new BasicHttpBinding()
+            {
+                // We could be getting back a lot of data, let's just max it out.
+                MaxReceivedMessageSize = int.MaxValue
+            };
 
             return new ProcessEventClient(binding, new EndpointAddress(this.Url));
         }

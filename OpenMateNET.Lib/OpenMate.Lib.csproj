@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fields.cs" />
+    <Compile Include="IOpenMateAPI.cs" />
     <Compile Include="IRequest.cs" />
     <Compile Include="OpenMateAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

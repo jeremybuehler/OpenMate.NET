@@ -10,11 +10,6 @@ namespace OpenMateNET
     public abstract class IRequest<T>
     {
         /// <summary>
-        /// Holds a static reference to the xml serializer for parsing data for this type of request.
-        /// </summary>
-        internal static readonly XmlSerializer Serializer = new XmlSerializer(typeof(T));
-
-        /// <summary>
         /// The unique identifier for the dealership we're requesting data for.
         /// </summary>
         public int DealerEndpointId { get; set; }
@@ -36,7 +31,7 @@ namespace OpenMateNET
         {
             using (var reader = XmlReader.Create(new StringReader(xml)))
             {
-                return (T)Serializer.Deserialize(reader);
+                return (T)new XmlSerializer(typeof(T)).Deserialize(reader);
             }
         }
     }
