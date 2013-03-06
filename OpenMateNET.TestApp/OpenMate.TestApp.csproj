@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenMateNET.Lib\OpenMateNET.Lib.csproj">
+    <ProjectReference Include="..\OpenMateNET.Lib\OpenMate.Lib.csproj">
       <Project>{5db287e3-e2fb-447f-a7d3-cce74032b4b4}</Project>
-      <Name>OpenMateNET.Lib</Name>
+      <Name>OpenMate.Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

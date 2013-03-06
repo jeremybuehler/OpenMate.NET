@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMateNET.Lib", "OpenMateNET.Lib\OpenMateNET.Lib.csproj", "{5DB287E3-E2FB-447F-A7D3-CCE74032B4B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMate.Lib", "OpenMateNET.Lib\OpenMate.Lib.csproj", "{5DB287E3-E2FB-447F-A7D3-CCE74032B4B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMateNET.TestApp", "OpenMateNET.TestApp\OpenMateNET.TestApp.csproj", "{66609D63-356B-4705-A39E-D5D51F48AC8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMate.TestApp", "OpenMateNET.TestApp\OpenMate.TestApp.csproj", "{66609D63-356B-4705-A39E-D5D51F48AC8D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{D6EE38C7-2E53-4D47-8488-D687DBE131A7}"
 	ProjectSection(SolutionItems) = preProject
