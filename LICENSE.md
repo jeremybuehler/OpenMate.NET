@@ -1,5 +1,4 @@
-Copyright 2013 Matt Wagner and other contributors
-http://mattgwagner.com
+Copyright 2013 Matt Wagner and other contributors http://mattgwagner.com
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
