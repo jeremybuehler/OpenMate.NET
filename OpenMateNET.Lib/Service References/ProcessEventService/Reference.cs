@@ -19,9 +19,6 @@ namespace OpenMateNET.Lib.ProcessEventService {
         [System.ServiceModel.OperationContractAttribute(Action="urn:ProcessEvent", ReplyAction="http://openmate.automate-webservices.com/ProcessEvent/processEventResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         OpenMateNET.Lib.ProcessEventService.processEventResponse processEvent(OpenMateNET.Lib.ProcessEventService.processEventRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:ProcessEvent", ReplyAction="http://openmate.automate-webservices.com/ProcessEvent/processEventResponse")]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessEventService.processEventResponse> processEventAsync(OpenMateNET.Lib.ProcessEventService.processEventRequest request);
     }
     
     /// <remarks/>
@@ -421,22 +418,6 @@ namespace OpenMateNET.Lib.ProcessEventService {
             inValue.payloadVersion = payloadVersion;
             OpenMateNET.Lib.ProcessEventService.processEventResponse retVal = ((OpenMateNET.Lib.ProcessEventService.ProcessEvent)(this)).processEvent(inValue);
             return retVal.processEventResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessEventService.processEventResponse> OpenMateNET.Lib.ProcessEventService.ProcessEvent.processEventAsync(OpenMateNET.Lib.ProcessEventService.processEventRequest request) {
-            return base.Channel.processEventAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessEventService.processEventResponse> processEventAsync(OpenMateNET.Lib.ProcessEventService.authenticationToken authenticationToken, int sourceThirdPartyId, int dealerEndpointId, OpenMateNET.Lib.ProcessEventService.transactionType eventType, string payload, string payloadVersion) {
-            OpenMateNET.Lib.ProcessEventService.processEventRequest inValue = new OpenMateNET.Lib.ProcessEventService.processEventRequest();
-            inValue.authenticationToken = authenticationToken;
-            inValue.sourceThirdPartyId = sourceThirdPartyId;
-            inValue.dealerEndpointId = dealerEndpointId;
-            inValue.eventType = eventType;
-            inValue.payload = payload;
-            inValue.payloadVersion = payloadVersion;
-            return ((OpenMateNET.Lib.ProcessEventService.ProcessEvent)(this)).processEventAsync(inValue);
         }
     }
 }

@@ -22,20 +22,12 @@ namespace OpenMateNET.Lib.ProcessSubscriptionService {
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeResponse unSubscribe(OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:UnSubscribe", ReplyAction="http://inbound.verbs.openmate.automate.com/ProcessSubscription/unSubscribeRespons" +
-            "e")]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeResponse> unSubscribeAsync(OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeRequest request);
-        
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="urn:getSubscriptions", ReplyAction="http://inbound.verbs.openmate.automate.com/ProcessSubscription/getSubscriptionsRe" +
             "sponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsResponse getSubscriptions(OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:getSubscriptions", ReplyAction="http://inbound.verbs.openmate.automate.com/ProcessSubscription/getSubscriptionsRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsResponse> getSubscriptionsAsync(OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="urn:getEndpointSubscriptions", ReplyAction="http://inbound.verbs.openmate.automate.com/ProcessSubscription/getEndpointSubscri" +
@@ -44,18 +36,11 @@ namespace OpenMateNET.Lib.ProcessSubscriptionService {
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsResponse getEndpointSubscriptions(OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:getEndpointSubscriptions", ReplyAction="http://inbound.verbs.openmate.automate.com/ProcessSubscription/getEndpointSubscri" +
-            "ptionsResponse")]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsResponse> getEndpointSubscriptionsAsync(OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsRequest request);
-        
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="urn:Subscribe", ReplyAction="http://inbound.verbs.openmate.automate.com/ProcessSubscription/subscribeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         OpenMateNET.Lib.ProcessSubscriptionService.subscribeResponse subscribe(OpenMateNET.Lib.ProcessSubscriptionService.subscribeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:Subscribe", ReplyAction="http://inbound.verbs.openmate.automate.com/ProcessSubscription/subscribeResponse")]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.subscribeResponse> subscribeAsync(OpenMateNET.Lib.ProcessSubscriptionService.subscribeRequest request);
     }
     
     /// <remarks/>
@@ -646,20 +631,6 @@ namespace OpenMateNET.Lib.ProcessSubscriptionService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeResponse> OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription.unSubscribeAsync(OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeRequest request) {
-            return base.Channel.unSubscribeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeResponse> unSubscribeAsync(OpenMateNET.Lib.ProcessSubscriptionService.authenticationToken authenticationToken, int dealerEndpointId, int thirdPartyId, OpenMateNET.Lib.ProcessSubscriptionService.transactionType transactionType) {
-            OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeRequest inValue = new OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeRequest();
-            inValue.authenticationToken = authenticationToken;
-            inValue.dealerEndpointId = dealerEndpointId;
-            inValue.thirdPartyId = thirdPartyId;
-            inValue.transactionType = transactionType;
-            return ((OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription)(this)).unSubscribeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsResponse OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription.getSubscriptions(OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsRequest request) {
             return base.Channel.getSubscriptions(request);
         }
@@ -671,19 +642,6 @@ namespace OpenMateNET.Lib.ProcessSubscriptionService {
             inValue.transactionType = transactionType;
             OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsResponse retVal = ((OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription)(this)).getSubscriptions(inValue);
             return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsResponse> OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription.getSubscriptionsAsync(OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsRequest request) {
-            return base.Channel.getSubscriptionsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsResponse> getSubscriptionsAsync(OpenMateNET.Lib.ProcessSubscriptionService.authenticationToken authenticationToken, int thirdPartyId, OpenMateNET.Lib.ProcessSubscriptionService.transactionType transactionType) {
-            OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsRequest inValue = new OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsRequest();
-            inValue.authenticationToken = authenticationToken;
-            inValue.thirdPartyId = thirdPartyId;
-            inValue.transactionType = transactionType;
-            return ((OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription)(this)).getSubscriptionsAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -701,19 +659,6 @@ namespace OpenMateNET.Lib.ProcessSubscriptionService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsResponse> OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription.getEndpointSubscriptionsAsync(OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsRequest request) {
-            return base.Channel.getEndpointSubscriptionsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsResponse> getEndpointSubscriptionsAsync(OpenMateNET.Lib.ProcessSubscriptionService.authenticationToken authenticationToken, int thirdPartyId, int endpointId) {
-            OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsRequest inValue = new OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsRequest();
-            inValue.authenticationToken = authenticationToken;
-            inValue.thirdPartyId = thirdPartyId;
-            inValue.endpointId = endpointId;
-            return ((OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription)(this)).getEndpointSubscriptionsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         OpenMateNET.Lib.ProcessSubscriptionService.subscribeResponse OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription.subscribe(OpenMateNET.Lib.ProcessSubscriptionService.subscribeRequest request) {
             return base.Channel.subscribe(request);
         }
@@ -727,21 +672,6 @@ namespace OpenMateNET.Lib.ProcessSubscriptionService {
             inValue.callback = callback;
             OpenMateNET.Lib.ProcessSubscriptionService.subscribeResponse retVal = ((OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription)(this)).subscribe(inValue);
             return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.subscribeResponse> OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription.subscribeAsync(OpenMateNET.Lib.ProcessSubscriptionService.subscribeRequest request) {
-            return base.Channel.subscribeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<OpenMateNET.Lib.ProcessSubscriptionService.subscribeResponse> subscribeAsync(OpenMateNET.Lib.ProcessSubscriptionService.authenticationToken authenticationToken, int dealerEndpointId, int thirdPartyId, OpenMateNET.Lib.ProcessSubscriptionService.transactionType transactionType, OpenMateNET.Lib.ProcessSubscriptionService.subscriptionCallback callback) {
-            OpenMateNET.Lib.ProcessSubscriptionService.subscribeRequest inValue = new OpenMateNET.Lib.ProcessSubscriptionService.subscribeRequest();
-            inValue.authenticationToken = authenticationToken;
-            inValue.dealerEndpointId = dealerEndpointId;
-            inValue.thirdPartyId = thirdPartyId;
-            inValue.transactionType = transactionType;
-            inValue.callback = callback;
-            return ((OpenMateNET.Lib.ProcessSubscriptionService.ProcessSubscription)(this)).subscribeAsync(inValue);
         }
     }
 }

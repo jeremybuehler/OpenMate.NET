@@ -62,9 +62,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ProcessEventService\OpenMateNET.Lib.ProcessEventService.processEventResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ProcessEventService\OpenMateNET.Lib.ProcessEventService.processEventResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -72,22 +69,10 @@
     <None Include="Service References\ProcessEventService\ProcessEventService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ProcessSubscriptionService\OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ProcessSubscriptionService\OpenMateNET.Lib.ProcessSubscriptionService.getSubscriptionsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ProcessSubscriptionService\OpenMateNET.Lib.ProcessSubscriptionService.subscribeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ProcessSubscriptionService\OpenMateNET.Lib.ProcessSubscriptionService.subscription.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ProcessSubscriptionService\OpenMateNET.Lib.ProcessSubscriptionService.subscriptionResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ProcessSubscriptionService\OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
