@@ -2,7 +2,7 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://openmate.automate-webservices.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ProcessEventService" targetNamespace="http://openmate.automate-webservices.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="https://openmate.automate-webservices.com:443/OpenMateGateway/ProcessEventService?xsd=1" namespace="http://openmate.automate-webservices.com/" />
+      <xsd:import schemaLocation="https://openmate-preprod.automate-webservices.com:443/OpenMateGateway/ProcessEventService?xsd=1" namespace="http://openmate.automate-webservices.com/" />
     </xsd:schema>
   </types>
   <message name="processEvent">
@@ -31,7 +31,7 @@
   </binding>
   <service name="ProcessEventService">
     <port name="ProcessEventPort" binding="tns:ProcessEventPortBinding">
-      <soap:address location="https://openmate.automate-webservices.com:443/OpenMateGateway/ProcessEventService" />
+      <soap:address location="https://openmate-preprod.automate-webservices.com:443/OpenMateGateway/ProcessEventService" />
     </port>
   </service>
 </definitions>

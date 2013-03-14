@@ -1,17 +1,29 @@
 ﻿using OpenMateNET.Lib;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace OpenMateNET.TestApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            // TODO
+            var Url = ConfigurationManager.AppSettings["Url"];
+            var Password = ConfigurationManager.AppSettings["Password"];
+            var ThirdPartySourceId = int.Parse(ConfigurationManager.AppSettings["ThirdPartySourceId"]);
+
+            var DealerEndPointId = 2;
+
+            IOpenMateAPI api = new OpenMateAPI(Url, ThirdPartySourceId, Password);
+
+            var result = api.GetOpenRepairOrders(DealerEndPointId);
+
+            foreach (var r in result)
+            {
+                Console.WriteLine(r.RepairOrderHeader.LaborAllowanceHoursNumeric);
+            }
+
+            Console.ReadKey();
         }
     }
 }

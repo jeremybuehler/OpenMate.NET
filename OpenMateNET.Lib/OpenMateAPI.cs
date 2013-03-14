@@ -2,6 +2,7 @@
 using OpenMateNET.Lib.Requests;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.ServiceModel;
 
 namespace OpenMateNET.Lib
@@ -29,7 +30,7 @@ namespace OpenMateNET.Lib
         /// </summary>
         public String Password { get; private set; }
 
-        public OpenMateAPI(String Url, int ThirdPartySourceId, String Password, int ThirdPartyId)
+        public OpenMateAPI(String Url, int ThirdPartySourceId, String Password)
         {
             this.Url = Url;
             this.ThirdPartySourceId = ThirdPartySourceId;
@@ -72,6 +73,14 @@ namespace OpenMateNET.Lib
                     // Payload versioning information
                     PAYLOAD_VERSION
                 );
+
+                // In debug, let's write out all of the XML to files.
+#if DEBUG
+                using (var w = new StreamWriter(String.Format("{0}.xml", Guid.NewGuid())))
+                {
+                    w.Write(response.response);
+                }
+#endif
 
                 // Check the response for errors and handle them as necessary.
                 CheckErrors(response);

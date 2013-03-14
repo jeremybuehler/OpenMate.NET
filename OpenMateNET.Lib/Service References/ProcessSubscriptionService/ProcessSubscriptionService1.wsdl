@@ -2,14 +2,14 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://inbound.verbs.openmate.automate.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ProcessSubscriptionService" targetNamespace="http://inbound.verbs.openmate.automate.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="https://openmate.automate-webservices.com:443/OpenMateGateway/ProcessSubscriptionService?xsd=1" namespace="http://inbound.verbs.openmate.automate.com/" />
+      <xsd:import schemaLocation="https://openmate-preprod.automate-webservices.com:443/OpenMateGateway/ProcessSubscriptionService?xsd=1" namespace="http://inbound.verbs.openmate.automate.com/" />
     </xsd:schema>
   </types>
-  <message name="subscribe">
-    <part name="parameters" element="tns:subscribe" />
+  <message name="unSubscribe">
+    <part name="parameters" element="tns:unSubscribe" />
   </message>
-  <message name="subscribeResponse">
-    <part name="parameters" element="tns:subscribeResponse" />
+  <message name="unSubscribeResponse">
+    <part name="parameters" element="tns:unSubscribeResponse" />
   </message>
   <message name="getSubscriptions">
     <part name="parameters" element="tns:getSubscriptions" />
@@ -23,16 +23,16 @@
   <message name="getEndpointSubscriptionsResponse">
     <part name="parameters" element="tns:getEndpointSubscriptionsResponse" />
   </message>
-  <message name="unSubscribe">
-    <part name="parameters" element="tns:unSubscribe" />
+  <message name="subscribe">
+    <part name="parameters" element="tns:subscribe" />
   </message>
-  <message name="unSubscribeResponse">
-    <part name="parameters" element="tns:unSubscribeResponse" />
+  <message name="subscribeResponse">
+    <part name="parameters" element="tns:subscribeResponse" />
   </message>
   <portType name="ProcessSubscription">
-    <operation name="subscribe">
-      <input wsam:Action="urn:Subscribe" message="tns:subscribe" />
-      <output wsam:Action="http://inbound.verbs.openmate.automate.com/ProcessSubscription/subscribeResponse" message="tns:subscribeResponse" />
+    <operation name="unSubscribe">
+      <input wsam:Action="urn:UnSubscribe" message="tns:unSubscribe" />
+      <output wsam:Action="http://inbound.verbs.openmate.automate.com/ProcessSubscription/unSubscribeResponse" message="tns:unSubscribeResponse" />
     </operation>
     <operation name="getSubscriptions">
       <input wsam:Action="urn:getSubscriptions" message="tns:getSubscriptions" />
@@ -42,15 +42,15 @@
       <input wsam:Action="urn:getEndpointSubscriptions" message="tns:getEndpointSubscriptions" />
       <output wsam:Action="http://inbound.verbs.openmate.automate.com/ProcessSubscription/getEndpointSubscriptionsResponse" message="tns:getEndpointSubscriptionsResponse" />
     </operation>
-    <operation name="unSubscribe">
-      <input wsam:Action="urn:UnSubscribe" message="tns:unSubscribe" />
-      <output wsam:Action="http://inbound.verbs.openmate.automate.com/ProcessSubscription/unSubscribeResponse" message="tns:unSubscribeResponse" />
+    <operation name="subscribe">
+      <input wsam:Action="urn:Subscribe" message="tns:subscribe" />
+      <output wsam:Action="http://inbound.verbs.openmate.automate.com/ProcessSubscription/subscribeResponse" message="tns:subscribeResponse" />
     </operation>
   </portType>
   <binding name="ProcessSubscriptionPortBinding" type="tns:ProcessSubscription">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="subscribe">
-      <soap:operation soapAction="urn:Subscribe" />
+    <operation name="unSubscribe">
+      <soap:operation soapAction="urn:UnSubscribe" />
       <input>
         <soap:body use="literal" />
       </input>
@@ -76,8 +76,8 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="unSubscribe">
-      <soap:operation soapAction="urn:UnSubscribe" />
+    <operation name="subscribe">
+      <soap:operation soapAction="urn:Subscribe" />
       <input>
         <soap:body use="literal" />
       </input>
@@ -88,7 +88,7 @@
   </binding>
   <service name="ProcessSubscriptionService">
     <port name="ProcessSubscriptionPort" binding="tns:ProcessSubscriptionPortBinding">
-      <soap:address location="https://openmate.automate-webservices.com:443/OpenMateGateway/ProcessSubscriptionService" />
+      <soap:address location="https://openmate-preprod.automate-webservices.com:443/OpenMateGateway/ProcessSubscriptionService" />
     </port>
   </service>
 </definitions>

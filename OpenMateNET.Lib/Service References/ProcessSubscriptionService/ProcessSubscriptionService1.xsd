@@ -27,6 +27,26 @@
       <xs:element minOccurs="0" name="return" type="tns:subscriptionResult" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="subscribe">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authenticationToken" type="tns:authenticationToken" />
+      <xs:element name="dealerEndpointId" type="xs:int" />
+      <xs:element name="thirdPartyId" type="xs:int" />
+      <xs:element minOccurs="0" name="transactionType" type="tns:transactionType" />
+      <xs:element minOccurs="0" name="callback" type="tns:subscriptionCallback" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscriptionCallback">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uri" type="xs:string" />
+      <xs:element minOccurs="0" name="apiVersion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subscribeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:subscriptionResult" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="getSubscriptions">
     <xs:sequence>
       <xs:element minOccurs="0" name="authenticationToken" type="tns:authenticationToken" />
@@ -46,26 +66,6 @@
       <xs:element minOccurs="0" name="type" type="tns:transactionType" />
       <xs:element name="isSubscribed" type="xs:boolean" />
       <xs:element minOccurs="0" name="callback" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="subscribe">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="authenticationToken" type="tns:authenticationToken" />
-      <xs:element name="dealerEndpointId" type="xs:int" />
-      <xs:element name="thirdPartyId" type="xs:int" />
-      <xs:element minOccurs="0" name="transactionType" type="tns:transactionType" />
-      <xs:element minOccurs="0" name="callback" type="tns:subscriptionCallback" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="subscriptionCallback">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="uri" type="xs:string" />
-      <xs:element minOccurs="0" name="apiVersion" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="subscribeResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:subscriptionResult" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getEndpointSubscriptions">

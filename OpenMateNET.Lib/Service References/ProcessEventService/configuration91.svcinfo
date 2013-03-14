@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="svPgthzDUlGQKbz405Y+kZolEYk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Jg1tlXnfJy+bp2VtLuzzSd8MvQw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ProcessEventPortBinding">
       <properties>
@@ -221,10 +221,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ProcessEventPort" contract="ProcessEventService.ProcessEvent" bindingType="basicHttpBinding" address="https://openmate.automate-webservices.com/OpenMateGateway/ProcessEventService" bindingConfiguration="ProcessEventPortBinding">
+    <endpoint name="ProcessEventPort" contract="ProcessEventService.ProcessEvent" bindingType="basicHttpBinding" address="https://openmate-preprod.automate-webservices.com/OpenMateGateway/ProcessEventService" bindingConfiguration="ProcessEventPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://openmate.automate-webservices.com:443/OpenMateGateway/ProcessEventService</serializedValue>
+          <serializedValue>https://openmate-preprod.automate-webservices.com:443/OpenMateGateway/ProcessEventService</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

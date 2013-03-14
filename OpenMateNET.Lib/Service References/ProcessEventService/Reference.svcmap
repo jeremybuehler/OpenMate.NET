@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://openmate.automate-webservices.com/OpenMateGateway/ProcessEventService?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://openmate-preprod.automate-webservices.com/OpenMateGateway/ProcessEventService?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProcessEventService.xsd" MetadataType="Schema" ID="72f201b8-b008-4c36-be0c-ca3b850974ff" SourceId="1" SourceUrl="https://openmate.automate-webservices.com/OpenMateGateway/ProcessEventService?xsd=1" />
-    <MetadataFile FileName="ProcessEventService.wsdl" MetadataType="Wsdl" ID="2fe020f3-7c9b-4309-92f5-a207c944b05e" SourceId="1" SourceUrl="https://openmate.automate-webservices.com/OpenMateGateway/ProcessEventService?wsdl" />
+    <MetadataFile FileName="ProcessEventService1.xsd" MetadataType="Schema" ID="fa6f2e3c-41af-4004-934b-506c74302405" SourceId="1" SourceUrl="https://openmate-preprod.automate-webservices.com/OpenMateGateway/ProcessEventService?xsd=1" />
+    <MetadataFile FileName="ProcessEventService1.wsdl" MetadataType="Wsdl" ID="e189f4b5-814e-494b-aaf3-75167e46c83a" SourceId="1" SourceUrl="https://openmate-preprod.automate-webservices.com/OpenMateGateway/ProcessEventService?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

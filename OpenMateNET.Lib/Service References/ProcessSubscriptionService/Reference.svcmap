@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://openmate.automate-webservices.com/OpenMateGateway/ProcessSubscriptionService?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://openmate-preprod.automate-webservices.com/OpenMateGateway/ProcessSubscriptionService?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProcessSubscriptionService.xsd" MetadataType="Schema" ID="6bb69e9a-a15f-4531-956c-1cce40047d30" SourceId="1" SourceUrl="https://openmate.automate-webservices.com/OpenMateGateway/ProcessSubscriptionService?xsd=1" />
-    <MetadataFile FileName="ProcessSubscriptionService.wsdl" MetadataType="Wsdl" ID="4a31f717-62d0-4731-bfaf-40b4e642a793" SourceId="1" SourceUrl="https://openmate.automate-webservices.com/OpenMateGateway/ProcessSubscriptionService?wsdl" />
+    <MetadataFile FileName="ProcessSubscriptionService1.xsd" MetadataType="Schema" ID="dd32aa4c-0fea-4317-8081-f3d06febd712" SourceId="1" SourceUrl="https://openmate-preprod.automate-webservices.com/OpenMateGateway/ProcessSubscriptionService?xsd=1" />
+    <MetadataFile FileName="ProcessSubscriptionService1.wsdl" MetadataType="Wsdl" ID="d3235d20-861a-41e4-b23a-54f5c940c549" SourceId="1" SourceUrl="https://openmate-preprod.automate-webservices.com/OpenMateGateway/ProcessSubscriptionService?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

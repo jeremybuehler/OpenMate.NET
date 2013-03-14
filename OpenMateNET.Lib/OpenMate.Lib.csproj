@@ -68,8 +68,8 @@
     <None Include="Service References\ProcessEventService\OpenMateNET.Lib.ProcessEventService.processEventResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ProcessEventService\ProcessEventService.wsdl" />
-    <None Include="Service References\ProcessEventService\ProcessEventService.xsd">
+    <None Include="Service References\ProcessEventService\ProcessEventService1.wsdl" />
+    <None Include="Service References\ProcessEventService\ProcessEventService1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ProcessSubscriptionService\OpenMateNET.Lib.ProcessSubscriptionService.getEndpointSubscriptionsResponse.datasource">
@@ -90,10 +90,6 @@
     <None Include="Service References\ProcessSubscriptionService\OpenMateNET.Lib.ProcessSubscriptionService.unSubscribeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ProcessSubscriptionService\ProcessSubscriptionService.wsdl" />
-    <None Include="Service References\ProcessSubscriptionService\ProcessSubscriptionService.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -109,6 +105,10 @@
     <None Include="Service References\ProcessSubscriptionService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ProcessSubscriptionService\ProcessSubscriptionService1.wsdl" />
+    <None Include="Service References\ProcessSubscriptionService\ProcessSubscriptionService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ProcessSubscriptionService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
