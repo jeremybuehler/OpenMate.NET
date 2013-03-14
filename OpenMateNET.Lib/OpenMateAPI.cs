@@ -39,7 +39,7 @@ namespace OpenMateNET.Lib
 
         public IEnumerable<Star5.RepairOrderType> GetOpenRepairOrders(int DealerEndpointId)
         {
-            var request = new GetRepairOrderRequest()
+            var request = new GetAdvisorConfigRequest()
             {
                 DealerEndpointId = DealerEndpointId
             };
@@ -132,7 +132,7 @@ namespace OpenMateNET.Lib
 
         internal virtual ProcessEventClient GetService()
         {
-            var binding = new BasicHttpBinding()
+            var binding = new BasicHttpsBinding()
             {
                 // We could be getting back a lot of data, let's just max it out.
                 MaxReceivedMessageSize = int.MaxValue

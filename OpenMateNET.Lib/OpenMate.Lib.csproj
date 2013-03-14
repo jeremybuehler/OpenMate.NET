@@ -49,6 +49,7 @@
     <Compile Include="IRequest.cs" />
     <Compile Include="OpenMateAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\GetAdvisorConfigRequest.cs" />
     <Compile Include="Requests\GetRepairOrderRequest.cs" />
     <Compile Include="Service References\ProcessEventService\Reference.cs">
       <AutoGen>True</AutoGen>
