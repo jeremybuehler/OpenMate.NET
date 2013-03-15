@@ -1,0 +1,56 @@
+<xml-fragment>
+  <ns:DealerManagementSystemID xmlns:ns="http://www.starstandard.org/STAR/5">100</ns:DealerManagementSystemID>
+  <ns:SpecifiedPerson xmlns:ns="http://www.starstandard.org/STAR/5">
+    <ns:GivenName>GINGER</ns:GivenName>
+    <ns:FamilyName>ROGERS</ns:FamilyName>
+  </ns:SpecifiedPerson>
+</xml-fragment>
+<xml-fragment>
+  <ns:DealerManagementSystemID xmlns:ns="http://www.starstandard.org/STAR/5">200</ns:DealerManagementSystemID>
+  <ns:SpecifiedPerson xmlns:ns="http://www.starstandard.org/STAR/5">
+    <ns:GivenName>KEELEY</ns:GivenName>
+    <ns:FamilyName>SMITH</ns:FamilyName>
+  </ns:SpecifiedPerson>
+</xml-fragment>
+<xml-fragment>
+  <ns:DealerManagementSystemID xmlns:ns="http://www.starstandard.org/STAR/5">201</ns:DealerManagementSystemID>
+  <ns:SpecifiedPerson xmlns:ns="http://www.starstandard.org/STAR/5">
+    <ns:GivenName>GEORGE</ns:GivenName>
+    <ns:FamilyName>MCCLAIN</ns:FamilyName>
+  </ns:SpecifiedPerson>
+</xml-fragment>
+<xml-fragment>
+  <ns:DealerManagementSystemID xmlns:ns="http://www.starstandard.org/STAR/5">300</ns:DealerManagementSystemID>
+  <ns:SpecifiedPerson xmlns:ns="http://www.starstandard.org/STAR/5">
+    <ns:GivenName>LOUIS</ns:GivenName>
+    <ns:FamilyName>PRIMA</ns:FamilyName>
+  </ns:SpecifiedPerson>
+</xml-fragment>
+<xml-fragment>
+  <ns:DealerManagementSystemID xmlns:ns="http://www.starstandard.org/STAR/5">400</ns:DealerManagementSystemID>
+  <ns:SpecifiedPerson xmlns:ns="http://www.starstandard.org/STAR/5">
+    <ns:GivenName>LOU</ns:GivenName>
+    <ns:FamilyName>MONTE</ns:FamilyName>
+  </ns:SpecifiedPerson>
+</xml-fragment>
+<xml-fragment>
+  <ns:DealerManagementSystemID xmlns:ns="http://www.starstandard.org/STAR/5">500</ns:DealerManagementSystemID>
+  <ns:SpecifiedPerson xmlns:ns="http://www.starstandard.org/STAR/5">
+    <ns:GivenName>JIM</ns:GivenName>
+    <ns:FamilyName>NABORS</ns:FamilyName>
+  </ns:SpecifiedPerson>
+</xml-fragment>
+<xml-fragment>
+  <ns:DealerManagementSystemID xmlns:ns="http://www.starstandard.org/STAR/5">GM</ns:DealerManagementSystemID>
+  <ns:SpecifiedPerson xmlns:ns="http://www.starstandard.org/STAR/5">
+    <ns:GivenName>MARTY</ns:GivenName>
+    <ns:FamilyName>ROBBINS</ns:FamilyName>
+  </ns:SpecifiedPerson>
+</xml-fragment>
+<xml-fragment>
+  <ns:DealerManagementSystemID xmlns:ns="http://www.starstandard.org/STAR/5">ASC</ns:DealerManagementSystemID>
+  <ns:SpecifiedPerson xmlns:ns="http://www.starstandard.org/STAR/5">
+    <ns:GivenName> SCOTT</ns:GivenName>
+    <ns:FamilyName>CIRILLO</ns:FamilyName>
+  </ns:SpecifiedPerson>
+</xml-fragment>

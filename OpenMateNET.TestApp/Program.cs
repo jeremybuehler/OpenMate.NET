@@ -16,11 +16,11 @@ namespace OpenMateNET.TestApp
 
             IOpenMateAPI api = new OpenMateAPI(Url, ThirdPartySourceId, Password);
 
-            var result = api.GetOpenRepairOrders(DealerEndPointId);
+            var result = api.GetServiceCatalog(DealerEndPointId);
 
             foreach (var r in result)
             {
-                Console.WriteLine(r.RepairOrderHeader.LaborAllowanceHoursNumeric);
+                Console.WriteLine("{0} - {1}", r.MajorGroupID, r.MajorGroupDescription);
             }
 
             Console.ReadKey();

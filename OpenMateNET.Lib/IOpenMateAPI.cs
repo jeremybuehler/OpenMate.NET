@@ -8,8 +8,8 @@ namespace OpenMateNET.Lib
     public interface IOpenMateAPI
     {
         /// <summary>
-        /// Retrieves a list of open repair orders for the given dealer id.
+        /// Returns a list of configured services for the dealer
         /// </summary>
-        IEnumerable<Star5.RepairOrderType> GetOpenRepairOrders(int DealerEndpointId);
+        IEnumerable<LaborOperationCodesMajorGroup> GetServiceCatalog(int DealerEndpointId);
     }
 }

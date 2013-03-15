@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace OpenMateNET.Lib.Requests
 {
-    public class GetRepairOrderRequest : IRequest<IEnumerable<Star5.RepairOrderType>>
+    public class GetRepairOrderRequest : IRequest<LaborOperationCodes>
     {
         public override transactionType TransactionType { get { return transactionType.GetRepairOrders; } }
 

@@ -13,7 +13,7 @@ namespace OpenMateNET.Lib.ProcessEventService {
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://openmate.automate-webservices.com/", ConfigurationName="ProcessEventService.ProcessEvent")]
-    internal interface ProcessEvent {
+    public interface ProcessEvent {
         
         // CODEGEN: Parameter 'authenticationToken' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="urn:ProcessEvent", ReplyAction="http://openmate.automate-webservices.com/ProcessEvent/processEventResponse")]
@@ -320,7 +320,7 @@ namespace OpenMateNET.Lib.ProcessEventService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="processEvent", WrapperNamespace="http://openmate.automate-webservices.com/", IsWrapped=true)]
-    internal partial class processEventRequest {
+    public partial class processEventRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://openmate.automate-webservices.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -363,7 +363,7 @@ namespace OpenMateNET.Lib.ProcessEventService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="processEventResponse", WrapperNamespace="http://openmate.automate-webservices.com/", IsWrapped=true)]
-    internal partial class processEventResponse {
+    public partial class processEventResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://openmate.automate-webservices.com/", Order=0)]
         public OpenMateNET.Lib.ProcessEventService.processEventResult processEventResult;
@@ -377,12 +377,12 @@ namespace OpenMateNET.Lib.ProcessEventService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    internal interface ProcessEventChannel : OpenMateNET.Lib.ProcessEventService.ProcessEvent, System.ServiceModel.IClientChannel {
+    public interface ProcessEventChannel : OpenMateNET.Lib.ProcessEventService.ProcessEvent, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    internal partial class ProcessEventClient : System.ServiceModel.ClientBase<OpenMateNET.Lib.ProcessEventService.ProcessEvent>, OpenMateNET.Lib.ProcessEventService.ProcessEvent {
+    public partial class ProcessEventClient : System.ServiceModel.ClientBase<OpenMateNET.Lib.ProcessEventService.ProcessEvent>, OpenMateNET.Lib.ProcessEventService.ProcessEvent {
         
         public ProcessEventClient() {
         }

@@ -37,14 +37,14 @@ namespace OpenMateNET.Lib
             this.Password = Password;
         }
 
-        public IEnumerable<Star5.RepairOrderType> GetOpenRepairOrders(int DealerEndpointId)
+        public IEnumerable<LaborOperationCodesMajorGroup> GetServiceCatalog(int DealerEndpointId)
         {
-            var request = new GetAdvisorConfigRequest()
-            {
-                DealerEndpointId = DealerEndpointId
-            };
+            var response = Request<LaborOperationCodes>(new GetServiceCatalogRequest()
+                {
+                    DealerEndpointId = DealerEndpointId
+                });
 
-            return Request(request);
+            return response.Items;
         }
 
         public virtual T Request<T>(IRequest<T> request)
