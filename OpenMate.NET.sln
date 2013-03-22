@@ -7,8 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMate.TestApp", "OpenMat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{D6EE38C7-2E53-4D47-8488-D687DBE131A7}"
 	ProjectSection(SolutionItems) = preProject
+		Build-Package.ps1 = Build-Package.ps1
 		Build.ps1 = Build.ps1
 		LICENSE.md = LICENSE.md
+		OpenMate.nuspec = OpenMate.nuspec
 		README.md = README.md
 	EndProjectSection
 EndProject

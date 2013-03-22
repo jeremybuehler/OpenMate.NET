@@ -1,0 +1,19 @@
+<package>
+  <metadata>
+    <version>0.0.1-rc</version>
+
+    <id>OpenMate.NET</id>
+    <title>OpenMate.NET</title>
+    <tags>OpenMate, AutoMate, DMS</tags>
+    <description>This library is intended to act as a simplified interface to the Open/Mate API from DealerMate's DMS.</description>
+    <projectUrl>http://github.com/mattgwagner/openmate.net</projectUrl>
+    <authors>Matt Wagner</authors>
+    <owners>Matt Wagner, ASR Pro LLC</owners>
+  </metadata>
+
+  <files>
+    <file src="\OpenMateNET.Lib\bin\Debug\OpenMateNET.Lib.dll" target="lib\net45" />
+    <file src="ReadME.md" target="tools" />
+    <file src="LICENSE.md" target="tools" />
+  </files>
+</package>
